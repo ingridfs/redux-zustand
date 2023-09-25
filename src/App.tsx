@@ -1,11 +1,14 @@
+import { Provider as ReduxProvider }  from 'react-redux'
+import { store } from './store';
+import { Player } from './pages/Player';
+
+import './styles/global.css'
 
 function App() {
   return (
-    <>
-      <p className="read-the-docs">
-        Hello
-      </p>
-    </>
+    <ReduxProvider store={store}>
+      <Player />
+    </ReduxProvider>
   )
 }
 
